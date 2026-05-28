@@ -41,7 +41,7 @@ Verdigris includes highlights for:
 
 ```lua
 {
-  "yourname/verdigris.nvim",
+  "Algorant/verdigris.nvim",
   name = "verdigris",
   priority = 1000,
   config = function()
@@ -69,7 +69,7 @@ Using Neovim's native package manager:
 
 ```lua
 vim.pack.add({
-  "https://github.com/yourname/verdigris.nvim",
+  "https://github.com/Algorant/verdigris.nvim",
 })
 
 vim.cmd.colorscheme("verdigris")
