@@ -1,8 +1,10 @@
 # verdigris.nvim
 
+![Verdigris core palette](./assets/verdigris-core-swatch.svg)
+
 A warm dark Neovim colorscheme inspired by oxidized copper, patina greens, muted aqua/teal, and gruvbox-like readability.
 
-Verdigris aims to be earthy, calm, readable, and terminal-friendly: a gruvbox-adjacent palette shifted toward moss, aqua, teal, and aged copper.
+Verdigris is earthy, calm, readable, and terminal-friendly: a gruvbox/everforest-adjacent palette grounded in weathered bronze and vellum, with patina greens and aqua as identity colors and ochre as a restrained brass accent.
 
 <!-- TODO: Add screenshot once the palette settles. -->
 

@@ -1,17 +1,17 @@
--- Verdigris: gruvbox-dark warmth shifted toward moss, aqua, teal, and blue.
--- Reds/yellows/oranges are intentionally muted and reserved for diagnostics,
--- search, diffs, and rare accents.
+-- Verdigris: neutral gruvbox-dark grounding with verdigris patina accents.
+-- Fern/aqua are the green identity colors; cyan is the primary cool accent;
+-- teal is secondary; moss is rare support; ochre is restrained brass emphasis.
 
 local M = {}
 
 M.dark = {
-	-- Hard, high-contrast dark base: closer to gruvbox hard than retro/pastel.
-	bg0 = "#141917",
-	bg1 = "#1d2520",
-	bg2 = "#263128",
-	bg3 = "#344033",
-	bg4 = "#465241",
-	bg5 = "#5b6654",
+	-- Hard, neutral dark base: closer to gruvbox-dark greys than green-tinted patina.
+	bg0 = "#1d2021",
+	bg1 = "#282828",
+	bg2 = "#32302f",
+	bg3 = "#3c3836",
+	bg4 = "#504945",
+	bg5 = "#665c54",
 
 	fg0 = "#fbf1c7",
 	fg1 = "#ebdbb2",
@@ -20,26 +20,33 @@ M.dark = {
 	fg4 = "#a89984",
 	fg5 = "#928374",
 
-	-- Main identity, aligned with existing gruvbox-verdant dotfiles:
-	-- pi accent=#8ec07c, accentDark/aqua=#689d6a, secondary/blue=#458588.
-	green = "#b8bb26",
-	moss = "#98971a",
-	fern = "#8ec07c",
-	aqua = "#689d6a",
-	teal = "#458588",
-	cyan = "#83a598",
+	-- Verdigris identity colors.
+	fern = "#8ec07c", -- primary green
+	aqua = "#689d6a", -- secondary patina green
+	cyan = "#83a598", -- primary cool accent
+	teal = "#458588", -- secondary blue-teal
+	moss = "#70764a", -- rare muted olive support
+
+	-- Compatibility aliases for conventional highlight roles.
+	green = "#8ec07c",
 	blue = "#458588",
 
-	-- Warm colors remain vivid, but should be used sparingly by groups.lua.
+	-- Brass/copper warmth: ochre is the Verdigris emphasis color.
+	-- Optional lighter trials are kept here for quick visual comparison.
+	ochre = "#d8a65c",
+	ochre_light = "#e0b36f",
+	ochre_lighter = "#e6bf86",
 	yellow = "#fabd2f",
 	orange = "#d65d0e",
 	red = "#fb4934",
 	purple = "#d3869b",
 
-	bg_red = "#3c1f1e",
-	bg_yellow = "#3a3118",
-	bg_green = "#27351f",
-	bg_blue = "#1f3334",
+	-- Muted overlays stay close to the neutral base instead of becoming colored backgrounds.
+	bg_red = "#3a2422",
+	bg_yellow = "#3a3122",
+	bg_ochre = "#3a3024",
+	bg_green = "#293127",
+	bg_blue = "#263133",
 
 	none = "NONE",
 }
