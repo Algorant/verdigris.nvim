@@ -23,7 +23,9 @@ function M.setup(p, opts)
 		SignColumn = { fg = c.fg4, bg = bg(c, c.bg0) },
 		FoldColumn = { fg = c.fg5, bg = bg(c, c.bg0) },
 		Folded = { fg = c.fg4, bg = bg(c, c.bg1), italic = true },
-		Visual = { bg = bg(c, c.bg_ochre) },
+		-- Keep selection highlights opaque even when the theme background is transparent.
+		-- Use a subtle green-tinted panel color so selections stay cohesive.
+		Visual = { bg = c.bg_visual },
 		VisualNOS = { link = "Visual" },
 		Search = { fg = c.bg0, bg = c.yellow },
 		IncSearch = { fg = c.bg0, bg = c.orange, bold = true },

@@ -45,6 +45,7 @@ M.dark = {
 	bg_red = "#3a2422",
 	bg_yellow = "#3a3122",
 	bg_ochre = "#3a3024",
+	bg_visual = "#252928",
 	bg_green = "#293127",
 	bg_blue = "#263133",
 
