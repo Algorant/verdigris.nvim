@@ -148,4 +148,4 @@ Planned extras for other tools and terminals:
 
 ## License
 
-[MIT](./LICENSE)
+[MIT](LICENSE)
