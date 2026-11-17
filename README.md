@@ -129,17 +129,6 @@ require("lualine").setup({
 })
 ```
 
-## Extras
-
-Planned extras for other tools and terminals:
-
-- Delta
-- Fish
-- Ghostty
-- WezTerm
-- Alacritty
-- Kitty
-
 ## Inspiration
 
 - [Gruvbox](https://github.com/morhetz/gruvbox)
