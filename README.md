@@ -1,45 +1,27 @@
 # verdigris.nvim
 
-![Verdigris core palette](./assets/verdigris-core-swatch.svg)
+![verdigris core palette](./assets/verdigris-core-swatch.svg)
 
-A warm dark Neovim colorscheme inspired by oxidized copper, patina greens, muted aqua/teal, and gruvbox-like readability.
+- a warm dark colorscheme for neovim, built around oxidized copper: somewhere between gruvbox dark and everforest.
+- part of [verdigris](https://github.com/Algorant/verdigris), which gives the rest of the desktop the same look.
 
-Verdigris is earthy, calm, readable, and terminal-friendly: a gruvbox/everforest-adjacent palette grounded in weathered bronze and vellum, with patina greens and aqua as identity colors and ochre as a restrained brass accent.
+## Showcase
 
-<!-- TODO: Add screenshot once the palette settles. -->
+<p>
+  <a href="assets/screenshots/editor.png"><img src="assets/screenshots/editor.png" width="24%"></a>
+  <a href="assets/screenshots/telescope.png"><img src="assets/screenshots/telescope.png" width="24%"></a>
+  <a href="assets/screenshots/completion.png"><img src="assets/screenshots/completion.png" width="24%"></a>
+  <a href="assets/screenshots/mini-files.png"><img src="assets/screenshots/mini-files.png" width="24%"></a>
+</p>
+<sub>editor · telescope · blink.cmp · mini.files</sub>
 
-## Features
+<details><summary>which-key</summary>
+  <a href="assets/screenshots/which-key.png"><img src="assets/screenshots/which-key.png" width="48%"></a>
+</details>
 
-- Warm dark palette with strong contrast and restrained accent colors
-- Transparent background support
-- Configurable italic and bold styles
-- Treesitter and LSP diagnostic highlights
-- Git diff and gitsigns highlights
-- Lualine theme
-- Plugin integrations for a modern Neovim setup
-- User highlight overrides
+## install
 
-## Supported plugins
-
-Verdigris includes highlights for:
-
-- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-- Built-in LSP diagnostics
-- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
-- [lazy.nvim](https://github.com/folke/lazy.nvim)
-- [mason.nvim](https://github.com/williamboman/mason.nvim)
-- [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
-- [snacks.nvim](https://github.com/folke/snacks.nvim)
-- [blink.cmp](https://github.com/Saghen/blink.cmp)
-- [which-key.nvim](https://github.com/folke/which-key.nvim)
-- [noice.nvim](https://github.com/folke/noice.nvim)
-- [nvim-notify](https://github.com/rcarriga/nvim-notify)
-- [mini.files](https://github.com/echasnovski/mini.files)
-- [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
-
-## Installation
-
-### lazy.nvim
+[lazy.nvim](https://github.com/folke/lazy.nvim):
 
 ```lua
 {
@@ -52,88 +34,31 @@ Verdigris includes highlights for:
 }
 ```
 
-For local development:
+or the built-in `vim.pack`:
 
 ```lua
-{
-  dir = "~/dev/projects/verdigris/verdigris.nvim",
-  name = "verdigris",
-  priority = 1000,
-  config = function()
-    vim.cmd.colorscheme("verdigris")
-  end,
-}
-```
-
-### Native Neovim package manager
-
-Using Neovim's native package manager:
-
-```lua
-vim.pack.add({
-  "https://github.com/Algorant/verdigris.nvim",
-})
-
+vim.pack.add({ "https://github.com/Algorant/verdigris.nvim" })
 vim.cmd.colorscheme("verdigris")
 ```
 
-## Configuration
+## options
 
-Verdigris works with sane defaults and does not require setup.
-
-Default configuration:
-
-```lua
-require("verdigris").setup({
-  transparent = false,
-  italics = {
-    comments = true,
-    keywords = true,
-  },
-  bold = {
-    functions = true,
-    types = true,
-  },
-  overrides = {},
-})
-```
-
-Example with options:
+No setup needed. To change something, call `setup` before `colorscheme`. The defaults:
 
 ```lua
 require("verdigris").setup({
   transparent = true,
-  italics = {
-    comments = true,
-    keywords = false,
-  },
-  bold = {
-    functions = true,
-    types = false,
-  },
-  overrides = {
-    NormalFloat = { bg = "#141917" },
-  },
-})
-
-vim.cmd.colorscheme("verdigris")
-```
-
-## Lualine
-
-```lua
-require("lualine").setup({
-  options = {
-    theme = require("verdigris.lualine"),
-  },
+  italics = { comments = true, keywords = true },
+  bold = { functions = true, types = true },
+  overrides = {}, -- any highlight group, e.g. { NormalFloat = { bg = "#141917" } }
 })
 ```
 
-## Inspiration
+For lualine, use `theme = require("verdigris.lualine")`.
 
-- [Gruvbox](https://github.com/morhetz/gruvbox)
-- Oxidized copper and verdigris patina
-- Muted aqua, teal, moss, and fern terminal palettes
+## supported plugins
+
+[nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) · built-in lsp diagnostics · [gitsigns](https://github.com/lewis6991/gitsigns.nvim) · [lazy.nvim](https://github.com/folke/lazy.nvim) · [mason](https://github.com/mason-org/mason.nvim) · [telescope](https://github.com/nvim-telescope/telescope.nvim) · [snacks](https://github.com/folke/snacks.nvim) · [blink.cmp](https://github.com/Saghen/blink.cmp) · [which-key](https://github.com/folke/which-key.nvim) · [noice](https://github.com/folke/noice.nvim) · [nvim-notify](https://github.com/rcarriga/nvim-notify) · [mini.files](https://github.com/echasnovski/mini.files) · [lualine](https://github.com/nvim-lualine/lualine.nvim)
 
 ## License
 
